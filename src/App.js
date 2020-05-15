@@ -1,25 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route,Switch } from "react-router-dom";
+import Layout from './components/Layout/Layout';
+import HomePage from './pages/HomePage/HomePage';
+import AboutPage from './pages/AboutPage/AboutPage';
+import BlogsPage from './pages/BlogsPage/BlogsPage';
+import SocioFormPage from './pages/SocioFormPage/SocioFormPage';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Layout>
+        <Switch>
+          <Route exact path="/" component= { HomePage } />
+          <Route exact path="/about" component= { AboutPage } />
+          <Route exact path="/blogs" component= { BlogsPage } />
+          <Route exact path="/blogs/:blogId" component= { BlogsPage } />
+          <Route exact path="/newSocio" component= { SocioFormPage } />
+          {/* <Route component= { NotFound } /> */}
+        </Switch>
+      </Layout>    
+    </BrowserRouter>
   );
 }
 

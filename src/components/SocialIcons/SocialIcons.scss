@@ -1,0 +1,19 @@
+.icons-container {
+    height: 7vh;
+    display: grid;
+    padding-right: 20px;
+    background-color: #47cfac;
+
+    &__section {
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-self: end;
+
+        &--link {
+            text-decoration: none;
+            display: inline-block;
+            color: #fff;
+        }
+    }
+}

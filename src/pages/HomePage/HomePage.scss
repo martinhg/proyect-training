@@ -1,0 +1,35 @@
+.home-section {
+    width: 100vw;
+    height: calc(100vh - 14vh);
+    background-image: url("../../assets/img/bg-main.png");
+    background-position: center;
+    background-size: cover;
+    
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &--title {
+            color: white;
+            letter-spacing: 5px;
+            line-height: 70px;
+            font-size: 15px;
+            font-weight: 900;
+        }
+
+        &--btn {
+            background: #47cfac;
+            width: 130px;
+            height: 40px;
+            border-radius: 10px;
+
+            &--link {
+                text-decoration: none;
+                color: black;
+                font-family: "RobotoMono";
+                font-weight: bold;
+            }
+        }
+    }
+}
