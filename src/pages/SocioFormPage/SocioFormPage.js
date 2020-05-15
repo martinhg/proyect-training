@@ -41,10 +41,6 @@ const handleSubmit = async event => {
 function SocioFormPage() {
     return (
         <SocioForm 
-        onChange={handleChange}
-        onSubmit={handleSubmit}
-        formValue={state.form}
-        error={state.error}
         />
     );
 }
